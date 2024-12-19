@@ -1,0 +1,9 @@
+<!-- templates/flowers/gul_detail.html -->
+{% extends 'base.html' %}
+
+{% block title %}Flower Details{% endblock %}
+
+{% block content %}
+<h2>{{ gul.nomi }}</h2>
+<p>Type: {{ gul.tur.nomi }}</p>
+{% endblock %}

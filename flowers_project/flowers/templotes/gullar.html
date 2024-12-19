@@ -1,0 +1,22 @@
+
+{% extends 'base.html' %}
+
+{% block title %}All Flowers{% endblock %}
+
+{% block content %}
+<h2>All Flowers</h2>
+<ul>
+    {% for gul in gullar %}
+        <li><a href="{% url 'gul_detail' gul.id %}">{{ gul.nomi }}</a></li>
+    {% endfor %}
+</ul>
+{% endblock %}
+<!-- templates/flowers/gul_detail.html -->
+{% extends 'base.html' %}
+
+{% block title %}Flower Details{% endblock %}
+
+{% block content %}
+<h2>{{ gul.nomi }}</h2>
+<p>Type: {{ gul.tur.nomi }}</p>
+{% endblock %}
